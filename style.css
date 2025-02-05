@@ -11,24 +11,11 @@ body {
 
 body {
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Pusatkan secara vertikal */
+  align-items: center; /* Pusatkan secara horizontal */
   font-family: sans-serif;
   font-size: 1.2rem;
   background-color: #f2f2f2;
-}
-
-header {
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  background-color: transparent; /* Remove background color */
-}
-
-h1 {
-  font-size: 2rem;
-  color: #333;
 }
 
 main {
@@ -36,16 +23,19 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  text-align: center;
 }
 
-.gif-container {
-  margin-bottom: 1rem;
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem; /* Beri sedikit jarak dengan elemen berikutnya */
 }
 
 .gif-container img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 .button-container {
@@ -100,46 +90,7 @@ button:hover {
   color: #fff;
 }
 
-#confetti-canvas {
-  width: 0%;
-  height: 0%;
-}
-
-.octo-arm {
-  animation: rotateTail 2s ease-in-out infinite;
-}
-
-@keyframes rotateTail {
-  0% {
-    transform: rotate(0);
-  }
-  20% {
-    transform: rotate(20deg);
-  }
-  40% {
-    transform: rotate(0deg);
-  }
-  60% {
-    transform: rotate(-20deg);
-  }
-  80% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
 @media screen and (max-width: 768px) {
-  header {
-    font-size: 1.5rem;
-  }
-  main {
-    padding: 1rem;
-  }
-  .gif-container {
-    margin-bottom: 0.5rem;
-  }
   button {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
