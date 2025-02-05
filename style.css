@@ -1,49 +1,53 @@
-/* Reset margin dan padding */
-body, h1, main {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header styling */
-header {
-  margin: 0;
-  text-align: center;
+html,
+body {
+  height: 100%;
 }
 
-header h1 {
-  font-size: 2rem;
-  color: #333;
-  margin: 0; /* Hapus margin bawah */
-  padding: 0.5rem 0; /* Sedikit padding agar tidak terlalu mentok */
-}
-
-/* Main container styles */
-main {
+body {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* Posisi elemen mulai dari atas */
   align-items: center;
-  gap: 0.5rem; /* Kurangi gap antar elemen menjadi 0.5rem */
-  margin-top: 1rem; /* Jika masih terlalu besar, ubah jadi 0.5rem */
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  background-color: #f2f2f2;
 }
 
-/* GIF container */
+main {
+  display: flex;
+  flex-direction: column; /* Elemen ditata vertikal */
+  align-items: center;
+  text-align: center;
+  gap: 1rem; /* Jarak antar elemen */
+  margin-top: 2rem; /* Tambahkan jarak dari atas */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
 .gif-container img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 
-/* Button container */
 .button-container {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1rem; /* Tambahkan jarak antar tombol */
 }
 
 button {
   padding: 1rem 2rem;
-  border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  border: none;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s;
@@ -55,26 +59,40 @@ button:hover {
 
 #no-button {
   background-color: #e74c3c;
-  color: white;
+  color: #fff;
+}
+
+#no-button:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(0, -5px);
+  }
+  75% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 #yes-button {
   background-color: #2ecc71;
-  color: white;
+  color: #fff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
+@media screen and (max-width: 768px) {
   button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .gif-container img {
-    max-width: 200px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
   }
 }
